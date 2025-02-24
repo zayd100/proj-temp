@@ -352,7 +352,7 @@ function typeMotto() {
     index++;
     setTimeout(typeMotto, 100);
   } else if (isDeleting && index > 0) {
-    // Deleting phase
+
     mottoElement.textContent = currentText.slice(0, -1);
     index--;
     setTimeout(typeMotto, 50);
