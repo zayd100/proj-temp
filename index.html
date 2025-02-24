@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deving Aura Affairs</title>
   <style>
-    /* Dark Theme */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212; /* Dark background */
-      color: #e0e0e0; /* Light text */
+      background-color: #121212; 
+      color: #e0e0e0; 
     }
 
-    /* Header */
     header {
       background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: white;
@@ -36,7 +34,6 @@
       animation: fadeInUp 1.5s ease-out;
     }
 
-    /* Animations */
     @keyframes fadeInDown {
       0% {
         opacity: 0;
@@ -58,7 +55,6 @@
       }
     }
 
-    /* Navigation */
     nav {
       display: flex;
       justify-content: center;
@@ -67,7 +63,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(10px); /* Blur effect */
+      backdrop-filter: blur(10px); 
     }
     nav a {
       color: white;
@@ -82,7 +78,7 @@
       transform: translateY(-3px);
     }
 
-    /* Hero Section */
+
     .hero {
       background: url('https://i.pinimg.com/736x/10/e6/f2/10e6f2f6bac7c7da4e9af0eaaa53ae77.jpg') center/cover no-repeat;
       height: 500px;
@@ -101,7 +97,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      background: rgba(0, 0, 0, 0.5);
     }
     .hero h2 {
       font-size: 3rem;
@@ -122,7 +118,7 @@
       }
     }
 
-    /* Container */
+    
     .container {
       max-width: 1200px;
       margin: 40px auto;
@@ -131,8 +127,6 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       border-radius: 10px;
     }
-
-    /* Sections */
     h2 {
       color: #6a11cb;
       text-align: center;
@@ -148,15 +142,13 @@
         opacity: 1;
       }
     }
-
-    /* Services Grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
     .service-card {
-      background: #2c2c2c; /* Dark card */
+      background: #2c2c2c; 
       padding: 20px;
       border-radius: 10px;
       text-align: center;
@@ -174,7 +166,7 @@
     }
     .service-card p {
       font-size: 1rem;
-      color: #b0b0b0; /* Light gray text */
+      color: #b0b0b0;
     }
     .service-card img {
       width: 100%;
@@ -182,14 +174,14 @@
       margin-bottom: 15px;
     }
 
-    /* Team Grid */
+   
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 30px;
     }
     .team-member {
-      background: #2c2c2c; /* Dark card */
+      background: #2c2c2c; 
       padding: 20px;
       border-radius: 10px;
       text-align: center;
@@ -214,10 +206,10 @@
     }
     .team-member p {
       font-size: 1rem;
-      color: #b0b0b0; /* Light gray text */
+      color: #b0b0b0; 
     }
 
-    /* Contact Form */
+  
     .contact form {
       display: flex;
       flex-direction: column;
@@ -228,8 +220,8 @@
       border: 1px solid #444;
       border-radius: 5px;
       font-size: 1rem;
-      background: #2c2c2c; /* Dark input */
-      color: #e0e0e0; /* Light text */
+      background: #2c2c2c;
+      color: #e0e0e0; 
     }
     .contact button {
       background: #6a11cb;
@@ -243,9 +235,9 @@
       background: #2575fc;
     }
 
-    /* Footer */
+
     footer {
-      background: #1e1e1e; /* Dark footer */
+      background: #1e1e1e; 
       color: white;
       text-align: center;
       padding: 30px 0;
@@ -299,10 +291,8 @@
     <section id="team" class="team">
       <h2>Our Team</h2>
       <div class="team-grid">
-        <div class="team-member">
-          
-          <h3>Zaid</h3>
-          
+        <div class="team-member">         
+          <h3>Zaid</h3>          
         </div>
         <div class="team-member">
           
@@ -321,8 +311,7 @@
         </div>
         <div class="team-member">
         
-          <h3>Areeba</h3>
-          
+          <h3>Areeba</h3>       
         </div>
       </div>
     </section>
@@ -351,7 +340,7 @@ mottoElement.style.color = 'white';
 mottoElement.style.textAlign = 'center';
 document.querySelector('.hero').appendChild(mottoElement);
 
-const motto = "Your Event, Our Passion."; // Replace with your chosen motto
+const motto = "Your Event, Our Passion."; 
 let index = 0;
 let isDeleting = false;
 
@@ -359,36 +348,34 @@ function typeMotto() {
   const currentText = mottoElement.textContent;
 
   if (!isDeleting && index < motto.length) {
-    // Typing phase
     mottoElement.textContent += motto.charAt(index);
     index++;
-    setTimeout(typeMotto, 100); // Typing speed (100ms per character)
+    setTimeout(typeMotto, 100);
   } else if (isDeleting && index > 0) {
     // Deleting phase
     mottoElement.textContent = currentText.slice(0, -1);
     index--;
-    setTimeout(typeMotto, 50); // Deleting speed (50ms per character)
+    setTimeout(typeMotto, 50);
   } else {
-    // Switch between typing and deleting
+   
     isDeleting = !isDeleting;
-    setTimeout(typeMotto, isDeleting ? 1000 : 100); // Pause before deleting or typing
+    setTimeout(typeMotto, isDeleting ? 1000 : 100);
   }
 }
 
 typeMotto();
-// RGB Color Cycling Effect
 const header = document.querySelector('header');
 
-let hue = 0; // Start with red (hue = 0)
+let hue = 0; 
 
 function cycleColors() {
-  hue = (hue + 1) % 360; // Increment hue and reset after 360
-  const color = `hsl(${hue}, 100%, 50%)`; // Convert hue to HSL color
-  header.style.background = `linear-gradient(135deg, ${color}, #2575fc)`; // Apply gradient
-  requestAnimationFrame(cycleColors); // Loop the animation
+  hue = (hue + 1) % 360;
+  const color = `hsl(${hue}, 100%, 50%)`; 
+  header.style.background = `linear-gradient(135deg, ${color}, #2575fc)`; 
+  requestAnimationFrame(cycleColors);
 }
 
-cycleColors(); // Start the RGB effect
+cycleColors(); 
 </script>
   
 </body>
